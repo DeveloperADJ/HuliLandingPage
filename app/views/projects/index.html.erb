@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Projects</title>
+</head>
+<body>
+<h1>Welcome to projects</h1>
+<%= render 'welcome/navbar' %>
+
+<div>
+	<% @projects.each do |project| %>
+    <ul>
+    	<li>name: <%= project.name %></li>
+    	<li>image: <%= image_tag project.imageURL.to_s %></li> 
+    </ul>
+  <% end %>
+</div>
+
+<div>
+	<%= link_to 'Add New Project', '../projects/new' %>	
+</div>
+
+</body>
+</html>
